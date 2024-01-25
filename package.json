@@ -7,7 +7,7 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "format": "npx prettier --write .",
+        "prettier": "npx prettier --write .",
         "test": "vitest",
         "prepare": "husky"
     },
@@ -47,13 +47,13 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "lint-staged"
+            "pre-commit": "npx lint-staged",
+            "pre-push": "npm test"
         }
     },
     "lint-staged": {
         "src/**/*.{js,jsx,ts,tsx}": [
-            "eslint --fix",
-            "vitest"
+            "eslint --fix"
         ]
     }
 }
