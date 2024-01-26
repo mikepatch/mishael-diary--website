@@ -9,13 +9,15 @@
         "lint": "next lint",
         "tsc": "tsc --noEmit",
         "prettier": "npx prettier --write .",
-        "test": "vitest",
+        "test": "vitest run",
+        "test-watch": "vitest",
         "prepare": "husky"
     },
     "dependencies": {
         "next": "14.1.0",
         "react": "^18",
-        "react-dom": "^18"
+        "react-dom": "^18",
+        "react-icons": "^5.0.1"
     },
     "devDependencies": {
         "@testing-library/react": "^14.1.2",
