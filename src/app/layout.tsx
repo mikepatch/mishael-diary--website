@@ -18,7 +18,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="pl">
-            <body className={inter.className}>{children}</body>
+            <body
+                className={`${inter.className} mx-auto min-h-screen overflow-x-hidden bg-gradient-to-tl from-brand-background to-brand-background-light`}
+            >
+                {children}
+            </body>
         </html>
     );
 }
