@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { TPhoto } from "../types";
+import { TPhoto } from "../../types";
 
 type TGalleryThumbnailProps = {
     photo: TPhoto;
