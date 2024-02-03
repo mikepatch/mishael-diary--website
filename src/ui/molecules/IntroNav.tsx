@@ -8,6 +8,12 @@ export type TSocials = {
     icon: string;
 };
 
+export type TNavItems = {
+    id: string;
+    label: "Blog" | "Portfolio" | "Produkty";
+    url: string;
+};
+
 const SOCIALS: TSocials[] = [
     {
         id: "social-instagram",
@@ -35,6 +41,12 @@ const SOCIALS: TSocials[] = [
     },
 ];
 
+const NAV_ITEMS: TNavItems[] = [
+    { id: "blog", label: "Blog", url: "/blog" },
+    { id: "portfolio", label: "Portfolio", url: "/portfolio" },
+    { id: "produkty", label: "Produkty", url: "/products" },
+];
+
 export default function IntroNav() {
     return (
         <nav className="flex flex-col items-center gap-4">
@@ -54,20 +66,20 @@ export default function IntroNav() {
                 ))}
             </ul>
             <ul className="flex w-[200px] flex-col gap-2 text-center">
-                <li className="block rounded-md border border-emerald-500 px-4 py-2">
-                    Blog
-                </li>
-                <li className="">
-                    <Link
-                        href="/portfolio"
-                        className="block rounded-md border border-emerald-500 px-4 py-2"
-                    >
-                        Portfolio
-                    </Link>
-                </li>
-                <li className="block rounded-md border border-emerald-500 px-4 py-2">
-                    Produkty
-                </li>
+                {NAV_ITEMS.map(({ id, label, url }) => (
+                    <li key={id}>
+                        <Link
+                            href={url}
+                            aria-label={label}
+                            role="link"
+                            rel="noopener noreferrer"
+                            className="block rounded-md border border-emerald-500 px-4 py-2 transition-all hover:bg-emerald-500 hover:text-white"
+                        >
+                            {label}
+                            {/* <div className="absolute right-0 top-0 h-full w-1 bg-emerald-500 hover:w-full" /> */}
+                        </Link>
+                    </li>
+                ))}
             </ul>
         </nav>
     );
