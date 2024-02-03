@@ -10,8 +10,8 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                "brand-background": "#fff5c1",
-                "brand-background-light": "#fffae0",
+                "brand-background": "#fffbe6",
+                "brand-background-light": "#fffdf5",
             },
         },
     },
