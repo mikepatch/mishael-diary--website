@@ -42,6 +42,16 @@ export default function Carousel({
     }, [setOpenedPhoto]);
 
     useEffect(() => {
+        if (openedPhoto) {
+            document.body.style.overflow = "hidden";
+        }
+
+        return () => {
+            document.body.style.overflow = "unset";
+        };
+    }, [openedPhoto]);
+
+    useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
             if (e.key === "Escape") handleClose();
             if (e.key === "ArrowRight") handleSwipe("right");
@@ -54,7 +64,7 @@ export default function Carousel({
     }, [handleClose, handleSwipe]);
 
     return (
-        <section className="fixed inset-0 flex flex-wrap items-end overflow-hidden bg-black bg-opacity-90  backdrop-blur-sm transition-all">
+        <section className="fixed inset-0 flex flex-wrap items-end overflow-hidden bg-black bg-opacity-90 backdrop-blur-sm transition-all">
             {/* <section className="fixed inset-0  cursor-zoom-out items-end justify-center overflow-hidden bg-black bg-opacity-90  backdrop-blur-sm transition-all"> */}
             {/* <section className="flex h-full w-full cursor-auto flex-wrap items-end justify-center"> */}
             <CloseButton onClick={handleClose} />
