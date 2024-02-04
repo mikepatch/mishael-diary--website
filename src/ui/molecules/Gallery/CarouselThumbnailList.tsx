@@ -43,7 +43,7 @@ export default function CarouselThumbnailList({
                 <li
                     key={photo.id}
                     ref={photoRefs.current[index]}
-                    className=" h-full shrink-0 cursor-pointer snap-center brightness-90 transition-all hover:brightness-100"
+                    className=" aspect-square h-full shrink-0 cursor-pointer snap-center brightness-90 transition-all hover:brightness-100"
                 >
                     <CarouselThumbnail
                         photo={photo}
