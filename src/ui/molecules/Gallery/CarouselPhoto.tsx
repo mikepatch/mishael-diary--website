@@ -46,7 +46,7 @@ export default function CarouselPhoto({
 
     return (
         <figure
-            className="relative m-0 flex h-3/5 w-full cursor-zoom-out justify-center lg:h-4/5"
+            className="relative m-0 flex h-4/5 w-full cursor-zoom-out justify-center lg:h-4/5"
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
             data-click-overlay="true"
