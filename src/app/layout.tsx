@@ -26,7 +26,7 @@ export default function RootLayout({
                 />
             </Head>
             <body
-                className={`${inter.className} mx-auto min-h-screen overflow-x-hidden bg-gradient-to-tl from-brand-background to-brand-background-light`}
+                className={`${inter.className} mx-auto min-h-dvh overflow-x-hidden bg-gradient-to-tl from-brand-background to-brand-background-light`}
             >
                 {children}
             </body>
