@@ -1,18 +1,7 @@
 import Link from "next/link";
-import FaIcon from "../atoms/FaIcon";
 
-export type TSocials = {
-    id: string;
-    label: string;
-    url: string;
-    icon: string;
-};
-
-export type TNavItems = {
-    id: string;
-    label: "Blog" | "Portfolio" | "Produkty";
-    url: string;
-};
+import { FaIcon } from "../atoms/Common";
+import { TNavItems, TSocials } from "../types";
 
 const SOCIALS: TSocials[] = [
     {
@@ -40,7 +29,6 @@ const SOCIALS: TSocials[] = [
         icon: "FaRegEnvelope",
     },
 ];
-
 const NAV_ITEMS: TNavItems[] = [
     { id: "blog", label: "Blog", url: "/blog" },
     { id: "portfolio", label: "Portfolio", url: "/portfolio" },
