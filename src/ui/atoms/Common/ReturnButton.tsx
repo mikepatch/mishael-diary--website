@@ -9,7 +9,7 @@ export default function ReturnButton() {
     return (
         <button
             type="button"
-            onClick={() => router.back()}
+            onClick={() => router.push("/")}
             className="flex w-fit gap-2 text-3xl"
         >
             <BsArrowReturnLeft className="self-center" />
