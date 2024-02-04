@@ -19,7 +19,7 @@ export default function CarouselThumbnail({
             src={photo.src}
             alt={photo.alt}
             onClick={() => setOpenedPhoto(photo)}
-            className={`h-full w-full rounded-sm object-cover ${openedPhotoId === photo.id ? "box-border border-4" : ""}`}
+            className={`aspect-square h-full w-full rounded-sm object-cover ${openedPhotoId === photo.id ? "box-border border-4" : ""}`}
             data-click-outside="true"
         />
     );
