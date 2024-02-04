@@ -10,7 +10,7 @@ export default function PortfolioLayout({
     return (
         <>
             <SubPageHeader title="Portfolio." />
-            <main className="px-6 sm:px-14">{children}</main>
+            <main className="p-6 sm:p-14">{children}</main>
         </>
     );
 }
