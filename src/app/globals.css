@@ -5,10 +5,10 @@
 ::-moz-selection {
     /* Code for Firefox */
     color: white;
-    background: rgb(16 185 129);
+    @apply bg-brand-secondary;
 }
 
 ::selection {
     color: white;
-    background: rgb(16 185 129);
+    @apply bg-brand-secondary;
 }
