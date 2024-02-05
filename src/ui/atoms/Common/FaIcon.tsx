@@ -3,15 +3,16 @@
 import { IconType } from "react-icons";
 import * as Icons from "react-icons/fa6";
 
-type TFaIconProps = {
-    name: string;
-};
-
 type TIconIndex = {
     [index: string]: IconType;
 };
 
-export default function FaIcon({ name }: TFaIconProps) {
+type TFaIconProps = {
+    name: string;
+    className?: string;
+};
+
+export default function FaIcon({ name, className }: TFaIconProps) {
     const IconDictionary = Icons as TIconIndex;
     const IconComponent = IconDictionary[name];
 
@@ -19,5 +20,9 @@ export default function FaIcon({ name }: TFaIconProps) {
         throw new Error(`The icon ${name} was not found in react-icons`);
     }
 
-    return <IconComponent />;
+    return <IconComponent className={className} />;
 }
+
+FaIcon.defaultProps = {
+    className: "",
+};
