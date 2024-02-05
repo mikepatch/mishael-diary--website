@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function IntroHeader() {
     return (
-        <header>
-            <figure className="relative aspect-square w-40 overflow-hidden rounded-[50%] border-2 border-emerald-500">
+        <header className="flex flex-col gap-2">
+            <figure className="relative aspect-square w-40 overflow-hidden rounded-full border-2 border-brand-secondary transition-all hover:scale-[103%]">
                 <Image
                     src="/img/mishael-avatar.jpeg"
                     width={200}
