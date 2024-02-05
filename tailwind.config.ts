@@ -12,6 +12,9 @@ const config: Config = {
             colors: {
                 "brand-background": "#fffbe6",
                 "brand-background-light": "#fffdf5",
+                "font-dark": "#212427",
+                "brand-secondary": "#D6CAB6",
+                // "brand-secondary": "#776B5D",
             },
         },
     },
