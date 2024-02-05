@@ -11,9 +11,9 @@ export default function GalleryThumbnailList({
     setOpenedPhoto,
 }: TGalleryThumbnailListProps) {
     return (
-        <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
             {photos.map(photo => (
-                <li key={photo.id} className="">
+                <li key={photo.id}>
                     <GalleryThumbnail
                         key={photo.id}
                         photo={photo}
