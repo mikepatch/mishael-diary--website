@@ -15,6 +15,7 @@ export default function Photo({ photo }: TPhotoProps) {
             className="h-full w-fit cursor-auto rounded-sm object-contain"
             blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
             placeholder="blur"
+            loading="lazy"
         />
     );
 }
